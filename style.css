@@ -7,10 +7,12 @@ body {
     background-color: #C0C0C0;
     font-family: 'Press Start 2P', cursive;
     color: #000;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .window {
-    width: 80%;
+    width: 100%;
     max-width: 800px;
     background-color: #FFF;
     border: 4px solid #000;
@@ -27,6 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .title-text {
@@ -35,6 +38,7 @@ body {
 
 .content {
     padding: 16px;
+    box-sizing: border-box;
 }
 
 h1, h2, p, ul, li, a {
@@ -59,4 +63,23 @@ ul {
 ul li {
     margin-left: 20px;
     text-indent: -15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .title-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title-text {
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    body {
+        height: auto;
+    }
 }
